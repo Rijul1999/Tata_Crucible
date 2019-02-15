@@ -15,5 +15,10 @@ fig = gmaps.figure()
 layer = gmaps.directions.Directions(Durango, SF,mode='car')
 #Add the layer
 fig.add_layer(layer)
-fig
+
+from datetime import datetime
+
+now =  datetime.now()
+directions_result = gmaps.directions("37.2593, -107.3490", mode="driving", avoid="potholes", departure_time="now")
+
 
